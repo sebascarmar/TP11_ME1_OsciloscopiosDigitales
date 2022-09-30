@@ -1,0 +1,49 @@
+\synctex=1
+\input{./Secciones/Caratula.tex}
+
+\usepackage{float} %Mejora la interfaz para definir objetos flotantes
+\usepackage{caption} %Permite customizar captions en entornos flotantes como figuras y tablas
+\usepackage{subcaption} %Provee lo mismo que captions pero para subfiguras y similares
+
+\usepackage{amsmath} %Paquete matemático
+\usepackage{amssymb} %Provee flechas, operadores, caracteres especiales, figuras geométricas, etc.
+\usepackage{mathtools} %Provee una serie de paquetes que mejoran la apariencia de documentos con matemáticas. Basado en amsmath
+\usepackage{siunitx} %Unidades del Sistema Internacional
+
+\usepackage{booktabs} %Mejora la calidad de las tablas
+\usepackage{multirow} 
+\usepackage{multicol}
+\usepackage{array} %Implementación extendida de los entornos array y tabular
+
+\usepackage{enumerate} %Agrega un argumento opcional al entonrno enumerate
+
+\usepackage{soul} %Proporciona espaciado separable con guiones, subrayado, tachado, etc.
+
+%\usepackage{svg} %Permite la integración de gráficos SVG
+%\usepackage{blindtext} %Provee comandos para crear textos 'blind' utiles para testear clases y paquetes
+
+\usepackage[spanish]{babel} \addto\captionsspanish{\def\tablename{Tabla}   
+\def\listtablename{\'Indice de tablas} } 
+
+
+
+\begin{document}
+  \maketitle
+
+  \null
+  \thispagestyle{empty}
+  \pagebreak
+
+  \setcounter{page}{1}
+  \tableofcontents
+  \newpage
+  %\listoffigures
+  %\listoftables
+  %\pagebreak
+  
+  \input{Secciones/Introduccion.tex}
+  \input{Secciones/MarcoTeorico.tex}
+  \input{Secciones/ActividadPractica.tex}
+  \input{Secciones/Conclusiones.tex}
+  
+\end{document}
