@@ -1,1 +1,91 @@
+  \pagebreak
   \subsection{Obervación de frecuencias producto del aliasing}
+    El \textit{aliasing} es un fenómeno que produce componentes de frecuencia falsas, es decir,
+    que nos son propias de la señal que se desea medir. Esto, en los osciloscopios digitales,
+    ocurre cuando la velocidad de muestreo que se utiliza es insuficiente, es decir, muy baja,
+    para la señal que se desea medir.
+    
+    Por el teorema del muestreo se sabe que la velocidad de muestreo debe ser, como mínimo, el
+    doble de la frecuencia máxima de la señal a ser medida.
+
+    \subsubsection{Práctica}
+      Con el uso de uno de los generadores se setea una señal \textbf{senoidal} de frecuencia
+      $\mathbf{f = 10~kHz}$, y una amplitud acorde a la mitad del valor posible, ya que no es
+      algo crítico. Luego, con el menú matemático se eligen las opciones \textbf{FFT}, \textbf{CH1},
+      \textbf{Hanning} y \textbf{Zoom X1}. Además, la velocidad de muestreo se setea en 
+      $\mathbf{f_s = 25~kSa/s}$. En la Figura~\ref{fig:Exp3Señal10k} se puede observar que la señal 
+      es correctamente muestreada, ya que se logra ver su componente de frecuencia.
+      
+      \begin{figure}[H]
+        \centering
+        \frame{\includegraphics[width=0.48\textwidth]{Imagenes/ActividadPractica/3ObservacionDeAlias/Exp3_Señal10K.jpeg}}
+        \caption{Espectro de señal senoidal de 10~kHz.}
+        \label{fig:Exp3Señal10k}
+      \end{figure}
+      
+      Ahora, se procede a cambiar la frecuencia de la señal que se desea medir, y se logra ver que
+      a partir de la frecuencia $\mathbf{f = 12,5~kHz}$ empiezan a haber frecuencias falsas. Este
+      efecto es esperable, ya que la velocidad de muestreo elegida cumple con el teorema de muestreo
+      solo para señales senoidales cuya frecuencia, como máximo, sea la mencionada en este párrafo.
+
+      \begin{figure}[H]
+        \centering
+        \begin{subfigure}[H]{0.48\textwidth}
+          \frame{\includegraphics[width=\textwidth]{Imagenes/ActividadPractica/3ObservacionDeAlias/Exp3_SeñalConAliasing.jpeg}}
+          \caption{$f=12,5~kHz$ y $fs=25~kSa/s$.}
+          \label{fig:Exp3AliasSeñal12_5kHz}
+        \end{subfigure}
+        \hfill 
+        \begin{subfigure}[H]{0.48\textwidth}
+          \frame{\includegraphics[width=\textwidth]{Imagenes/ActividadPractica/3ObservacionDeAlias/Exp3_SeñalConAliasing.jpeg}}
+          \caption{$f=15~kHz$ y $fs=25~kSa/s$.}
+          \label{fig:Exp3AliasSeñal15kHz}
+        \end{subfigure}
+
+        \caption{Espectro de señales con aliasing.}
+        \label{fig:Exp3SeñalConAlias}
+      \end{figure}
+
+      \subsubsection*{Aliasing con señal cuadrada}
+      Se procede a hacer la misma experiencia anterior, pero con una señal cuadrada de $\mathbf{f=10kHz}$.
+      Su forma en el tiempo y su espectro se puede ver en la Figura~\ref{fig:Exp3SeñalCuad10k}.
+
+      \begin{figure}[H]
+        \centering
+        \begin{subfigure}[H]{0.48\textwidth}
+          \frame{\includegraphics[width=\textwidth]{Imagenes/logo-utn.png}}
+          \caption{$f=10~kHz$ .}
+          \label{fig:Exp3SeñalCuadEnTiempo}
+        \end{subfigure}
+        \hfill 
+        \begin{subfigure}[H]{0.48\textwidth}
+          \frame{\includegraphics[width=\textwidth]{Imagenes/ActividadPractica/3ObservacionDeAlias/Exp3_SeñalCuadradaSINAlias.jpeg}}
+          \caption{$f=15~kHz$ y $fs=25~kSa/s$.}
+          \label{fig:Exp3EspectroSeñalCuad}
+        \end{subfigure}
+
+        \caption{Espectro de señales con aliasing.}
+        \label{fig:Exp3SeñalCuad10k}
+      \end{figure}
+
+      Luego, se procede a aumentar la frecuencia de la señal del generador, y también se logra ver los efectos
+      del aliasing. En la Figura~\ref{fig:Exp3SeñalCuadConAlias} se muestra lo mencionado.
+
+      \begin{figure}[H]
+        \centering
+        \begin{subfigure}[H]{0.48\textwidth}
+          \frame{\includegraphics[width=\textwidth]{Imagenes/ActividadPractica/3ObservacionDeAlias/Exp3_SeñalConAliasing.jpeg}}
+          \caption{$f=12,5~kHz$ y $fs=25~kSa/s$.}
+          \label{fig:Exp3AliasSeñalCuad1}
+        \end{subfigure}
+        \hfill 
+        \begin{subfigure}[H]{0.48\textwidth}
+          \frame{\includegraphics[width=\textwidth]{Imagenes/ActividadPractica/3ObservacionDeAlias/Exp3_SeñalConAliasing.jpeg}}
+          \caption{$f=15~kHz$ y $fs=25~kSa/s$.}
+          \label{fig:Exp3AliasSeñalCuad2}
+        \end{subfigure}
+
+        \caption{Espectro de señales con aliasing.}
+        \label{fig:Exp3SeñalCuadConAlias}
+      \end{figure}
+
