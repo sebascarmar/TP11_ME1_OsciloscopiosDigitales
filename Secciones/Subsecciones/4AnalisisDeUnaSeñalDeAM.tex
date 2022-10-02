@@ -1,8 +1,34 @@
   \pagebreak
   \subsection{Análisis de una señal modulada en amplitud}
-    Las señales que son moduladas en amplitud (AM) poseen un espectro característico. Para poder visualizar
-    el espectro de una señal AM se utiliza el circuito de la Figura~\ref{fig:ModuladorAM}. El mismo posee un
-    circuito sintonizado o resonante, cuya frecuencia es $\mathbf{f_o = 50~kHz}$.
+    Las señales que son moduladas en amplitud (AM) poseen un espectro característico, como el que se puede ver
+    en la Figura~\ref{fig:EjemploEspectroModAM}. Mediante el espectro se puede medir frecuencia, pero también
+    las amplitudes, de portadora y bandas laterales, lo que permite calcular el índice de modulación, el cual es
+    un parámetro importante a tener en cuenta. 
+
+    \begin{figure}[H]
+      \centering
+      \frame{\includegraphics[width=0.48\textwidth]{Imagenes/ActividadPractica/4AnalisisDeUnaSeñalDeAM/EjemploEspectroAM.png}}
+      \caption{Ejemplo de espectro de una señal AM.}
+      \label{fig:EjemploEspectroModAM}
+    \end{figure}
+
+    Recordando que el índice de modulación es $m= E_m / Ec$, y además, que el módulo matemático del osciloscopio 
+    en cuestión mide las amplitudes en dBV, entonces
+
+    \begin{equation}
+      m = \dfrac{E_{BLalteral} \cdot 2}{E_{Portadora}} \hspace{20pt}
+      \Longrightarrow \hspace{20pt} m_{dB} = dB_{BLateral} - dB_{Portadora} + 6dB
+      \label{eqn:IndiceModEndB}
+    \end{equation}
+
+    \begin{equation}
+      \therefore \hspace{20pt} m=10^{\dfrac{m_{dB}}{20}}
+      \label{eqn:IndiceMod}
+    \end{equation}
+
+    Para poder visualizar el espectro de una señal AM se utiliza el circuito de la Figura~\ref{fig:ModuladorAM}. 
+    El mismo posee una circuito sintonizado o resonante, el cual está diseñado para que su
+    frecuencia sea de $\mathbf{f_o = 50~kHz}$.
 
     \begin{figure}[H]
       \centering
@@ -83,7 +109,10 @@
         \label{tab:MedicionesFreqAMSeno}
       \end{table}
 
-      De la misma forma, se procede a realizar mediciones de amplitud de la señal AM en cuestión. 
+      De la misma forma, se procede a realizar mediciones de amplitud de la señal AM en cuestión. En la
+      Figura~\ref{fig:AmplitudesAMSeno} se pueden observar dichas mediciones. Luego, con estas y 
+      el uso de las ecuaciones~(\ref{eqn:IndiceModEndB}) y (\ref{eqn:IndiceMod}), se completa la 
+      Tabla~\ref{tab:MedicionesAmplitAMSeno}.
 
       \begin{figure}[H]
         \centering
@@ -99,7 +128,23 @@
           \label{fig:AmpltiudBLSupAMSeno}
         \end{subfigure}
       
-        \caption{Frecuencias de la señal AM con el seno como modulante.}
+        \caption{Amplitudes de la señal AM con el seno como modulante.}
         \label{fig:AmplitudesAMSeno}
       \end{figure}
 
+
+      \begin{table}[H]
+        \centering
+      \begin{tabular}{cccc} \hline \hline
+          \textbf{Ampl. BLSuperior}    &   \textbf{Ampl. Portadora}  &  \textbf{Índice m}  & \textbf{Índice m}  \\ \hline
+          $48,4~dB$   &   $56,4~dB$   &    $-2~dB$   &   $0,79$   \\ \hline \hline
+        \end{tabular}
+        \caption{Amplitudes medidas e índice de modulación.}
+        \label{tab:MedicionesAmplitAMSeno}
+      \end{table}
+
+
+    \subsubsection{Señal triangular como modulante}
+
+
+    \subsubsection{Señal cuadrada como modulante}
