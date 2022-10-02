@@ -1,1 +1,52 @@
+  \pagebreak
   \subsection{Análisis de una señal modulada en amplitud}
+    Las señales que son moduladas en amplitud (AM) poseen un espectro característico. Para poder visualizar
+    el espectro de una señal AM se utiliza el circuito de la Figura~\ref{fig:ModuladorAM}. El mismo posee un
+    circuito sintonizado o resonante, cuya frecuencia es $\mathbf{f_o = 50~kHz}$.
+
+    \begin{figure}[H]
+      \centering
+      \frame{\includegraphics[width=0.48\textwidth]{Imagenes/ActividadPractica/4AnalisisDeUnaSeñalDeAM/CircuitoModAM.png}}
+      \caption{Circuito de modulación en amplitud.}
+      \label{fig:ModuladorAM}
+    \end{figure}
+
+    Con el generador \textbf{G1} se inyecta una señal senoidal que actúa como \textbf{portadora} de frecuencia 
+    $\mathbf{f_c=50~kHz}$, y con el generador \textbf{G2} se inyecta la señal \textbf{modulante} de frecuencia
+    $\mathbf{f_m=1~kHz}$, que puede ser senoidal, triangular o cuadrada. Las amplitudes utilizadas mantienen 
+    una relación tal que la de la portadora sea el doble que la de modulante.
+
+    \subsubsection*{Señal senoidal como modulante}
+      Se setea el generador G2 para que entregue una señal senoidal, que actúa como banda base. Dicha señal
+      y la portadora se pueden ver en la Figura~\ref{fig:SeñalesParaAM1}.
+      
+      \begin{figure}[H]
+        \centering
+        \begin{subfigure}[H]{0.48\textwidth}
+          \frame{\includegraphics[width=\textwidth]{Imagenes/ActividadPractica/4AnalisisDeUnaSeñalDeAM/Exp4_G1Portadora_enTiempo.jpeg}}
+          \caption{$f=12,5~kHz$ y $fs=25~kSa/s$.}
+          \label{fig:PortadoraEnTiempo}
+        \end{subfigure}
+        \hfill 
+        \begin{subfigure}[H]{0.48\textwidth}
+          \frame{\includegraphics[width=\textwidth]{Imagenes/ActividadPractica/4AnalisisDeUnaSeñalDeAM/Exp4_G2SenoModulante_enTiempo.jpeg}}
+          \caption{$f=15~kHz$ y $fs=25~kSa/s$.}
+          \label{fig:SenoModulanteEnTiempo}
+        \end{subfigure}
+      
+        \caption{Espectro de señales con aliasing.}
+        \label{fig:SeñalesParaAM1}
+      \end{figure}
+        
+      
+      Se elige una base de tiempos de $\mathbf{1~ms/div}$ y luego, el menú del trigger se setea de la siguiente manera:
+      \textbf{Pendiente: +}, \textbf{Fuente: CH1}, \textbf{Modo: Auto}, \textbf{Acoplamiento: Rechazo AF}. Con
+      todo esto, la imagen obtenida se encuentra en la Figura~\ref{fig:SeñalAM1EnTiempo}.
+      
+      \begin{figure}[H]
+        \centering
+        \frame{\includegraphics[width=0.48\textwidth]{Imagenes/ActividadPractica/4AnalisisDeUnaSeñalDeAM/Exp4_SeñalAMConConfigDeTriggerMasAmplitud.jpeg}}
+        \caption{Señal AM con seno como modulante.}
+        \label{fig:SeñalAM1EnTiempo}
+      \end{figure}
+
