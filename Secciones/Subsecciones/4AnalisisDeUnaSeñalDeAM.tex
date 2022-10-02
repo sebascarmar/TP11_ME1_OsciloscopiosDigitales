@@ -13,11 +13,11 @@
     \end{figure}
 
     Recordando que el índice de modulación es $m= E_m / Ec$, y además, que el módulo matemático del osciloscopio 
-    en cuestión mide las amplitudes en dBV, entonces
+    en cuestión mide las amplitudes en dBv, entonces
 
     \begin{equation}
       m = \dfrac{E_{BLalteral} \cdot 2}{E_{Portadora}} \hspace{20pt}
-      \Longrightarrow \hspace{20pt} m_{dB} = dB_{BLateral} - dB_{Portadora} + 6dB
+      \Longrightarrow \hspace{20pt} m_{dB} = dBv_{BLateral} - dBv_{Portadora} + 6dB
       \label{eqn:IndiceModEndB}
     \end{equation}
 
@@ -76,10 +76,11 @@
         \label{fig:SeñalAM1EnTiempo}
       \end{figure}
 
-      Luego, en el menú matemático se eligen las siguientes opciones: \textbf{Operación: FFT}, \textbf{Fuente: CH1}, \textbf{Ventana: Hanning} y
-      \textbf{Zoom x10}. Además. el modo de adquisición se pone en \textbf{Promedio} con 64 cuentas. A continuación, mediante el uso de 
-      cursores, se procede a medir la frecuencias. Dichas mediciones se pueden apreciar en la Figura~\ref{fig:FreqAMSeno}, y los valores 
-      se encuentran tabulados en la Tabla~\ref{tab:MedicionesFreqAMSeno}.
+      Luego, en el menú matemático se eligen las siguientes opciones: \textbf{Operación: FFT}, \textbf{Fuente: CH1},
+      \textbf{Ventana: Hanning} y \textbf{Zoom x10}. Además, el modo de adquisición se pone en \textbf{Promedio} con 
+      64 cuentas. A continuación, mediante el uso de cursores, se procede a medir la frecuencias. Dichas mediciones se 
+      pueden apreciar en la Figura~\ref{fig:FreqAMSeno}, y los valores se encuentran tabulados en la 
+      Tabla~\ref{tab:MedicionesFreqAMSeno}.
 
       \begin{figure}[H]
         \centering
@@ -136,15 +137,88 @@
       \begin{table}[H]
         \centering
       \begin{tabular}{cccc} \hline \hline
-          \textbf{Ampl. BLSuperior}    &   \textbf{Ampl. Portadora}  &  \textbf{Índice m}  & \textbf{Índice m}  \\ \hline
-          $48,4~dB$   &   $56,4~dB$   &    $-2~dB$   &   $0,79$   \\ \hline \hline
+          \textbf{Ampl. BLInferior}    &   \textbf{Ampl. Portadora}  &  \textbf{Índice m}  & \textbf{Índice m}  \\ \hline
+          $48,4~dBv$   &   $56,4~dBv$   &    $-2~dB$   &   $0,79$   \\ \hline \hline
         \end{tabular}
         \caption{Amplitudes medidas e índice de modulación.}
         \label{tab:MedicionesAmplitAMSeno}
       \end{table}
 
 
-    \subsubsection{Señal triangular como modulante}
-
-
     \subsubsection{Señal cuadrada como modulante}
+      A continuación, se procede a cambiar el generador \textbf{G2} para que inyecte una la señal cuadrada
+      como \textbf{modulante} con la misma frecuencia antes utilizada, respetando la relación de amplitudes
+      previamente configurada. La señal AM obtenida se puede ver en la Figura~\ref{fig:SeñalAMConCuadrada}.
+
+      \begin{figure}[H]
+        \centering
+        \frame{\includegraphics[width=0.48\textwidth]{Imagenes/logo-utn.png}}
+        \caption{Señal AM con onda cuadrada como modulante.}
+        \label{fig:SeñalAMConCuadrada}
+      \end{figure}
+
+      Finalmente, se hace uso de de las distintas ventanas que posee el menú matemático, para ver la diferencia
+      entre cada presentación del espectro de la señal AM en cuestión. En la Figura~\ref{fig:VentanasSeñalAMCuad}
+      se puede apreciar lo mencionado.
+
+      \begin{figure}[H]
+        \centering
+        \begin{subfigure}[H]{0.48\textwidth}
+          \frame{\includegraphics[width=\textwidth]{Imagenes/ActividadPractica/4AnalisisDeUnaSeñalDeAM/Exp4_SeñalRectangularAM_Hanning.jpeg}}
+          \caption{Ventana Hanning.}
+        \end{subfigure}
+        \hfill 
+        \begin{subfigure}[H]{0.48\textwidth}
+          \frame{\includegraphics[width=\textwidth]{Imagenes/ActividadPractica/4AnalisisDeUnaSeñalDeAM/Exp4_SeñalRectangularAM_Rectangular.jpeg}}
+          \caption{Ventana Rectangular.}
+        \end{subfigure}
+        \hfill 
+        \begin{subfigure}[H]{0.48\textwidth}
+          \frame{\includegraphics[width=\textwidth]{Imagenes/ActividadPractica/4AnalisisDeUnaSeñalDeAM/Exp4_SeñalRectangularAM_Flattop.jpeg}}
+          \caption{Ventana Flattop.}
+        \end{subfigure}
+      
+        \caption{Distintas ventanas de una señal AM con onda cuadrada como modulante.}
+        \label{fig:VentanasSeñalAMCuad}
+      \end{figure}
+
+
+    \subsubsection{Señal triangular como modulante}
+      De la misma forma que en la sección anterior, se procede a cambiar el generador \textbf{G2} para que 
+      inyecte una señal triangular como \textbf{modulante} con la misma frecuencia antes utilizada, 
+      respetando la relación de amplitudes previamente configurada. La señal AM obtenida se puede ver en la 
+      Figura~\ref{fig:SeñalAMConTriangular}.
+
+      \begin{figure}[H]
+        \centering
+        \frame{\includegraphics[width=0.48\textwidth]{Imagenes/logo-utn.png}}
+        \caption{Señal AM con onda triangular como modulante.}
+        \label{fig:SeñalAMConTriangular}
+      \end{figure}
+
+      Finalmente, se hace uso de de las distintas ventanas que posee el menú matemático, para ver la diferencia
+      entre cada presentación del espectro de la señal AM en cuestión. En la Figura~\ref{fig:VentanasSeñalAMTriang}
+      se puede apreciar lo mencionado.
+
+      \begin{figure}[H]
+        \centering
+        \begin{subfigure}[H]{0.48\textwidth}
+          \frame{\includegraphics[width=\textwidth]{Imagenes/ActividadPractica/4AnalisisDeUnaSeñalDeAM/Exp4_SeñalRectangularAM_Hanning.jpeg}}
+          \caption{Ventana Hanning.}
+        \end{subfigure}
+        \hfill 
+        \begin{subfigure}[H]{0.48\textwidth}
+          \frame{\includegraphics[width=\textwidth]{Imagenes/ActividadPractica/4AnalisisDeUnaSeñalDeAM/Exp4_SeñalRectangularAM_Rectangular.jpeg}}
+          \caption{Ventana Rectangular.}
+        \end{subfigure}
+        \hfill 
+        \begin{subfigure}[H]{0.48\textwidth}
+          \frame{\includegraphics[width=\textwidth]{Imagenes/ActividadPractica/4AnalisisDeUnaSeñalDeAM/Exp4_SeñalRectangularAM_Flattop.jpeg}}
+          \caption{Ventana Flattop.}
+        \end{subfigure}
+      
+        \caption{Distintas ventanas de una señal AM con onda triangular como modulante.}
+        \label{fig:VentanasSeñalAMTriang}
+      \end{figure}
+
+
