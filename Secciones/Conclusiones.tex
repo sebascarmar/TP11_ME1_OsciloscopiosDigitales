@@ -1,1 +1,34 @@
+  \pagebreak
   \section{Conclusiones}
+
+
+  Respecto a los distintos tipos de ventanas que se encuentran disponibles para la FFT, se puede realizar
+  las siguientes afirmaciones
+
+  \begin{itemize}
+    \item \textbf{Hanning:} es útil para las formas de onda periódicas. Permite medir mejor la frecuencia, pero peor
+      la amplitud que la ventana Flattop.
+    \item \textbf{Flattop:} es útil para formas de onda periódica. Permite medir mejor la amplitud, pero peor
+      la frecuencia que la ventana Hanning.
+    \item \textbf{Rectangular:} es útil para pulsos o señales transitorias. Es específica para formas de onda
+      que no presentan discontinuidades.
+  \end{itemize}
+
+  En el experimento 3 se forzó la aparición del aliasing. Esto se dio debido a que la velocidad de muestreo ($25~kSa/s$)
+  no cumplía con el teorema del Muestreo a partir de determinada frecuencia de la señal a muestrear (a partir de $12~kHz$).
+  Esto significa, por un lado, que la señal no puede ser muestreada de forma correcta, y además, se generan componentes
+  de frecuencia falsas que no son propias de la señal original.
+
+  Para concluir, se nombran algunas características sobre los distintos modos de adquisición que posee el osciloscopio
+  digital:
+
+  \begin{itemize}
+    \item \textbf{Normal:} el osciloscopio muestrea la señal en intervalos de tiempo equidistantes para construir la señal. Este
+      modo representa de forma acertada señales analógicas sin transitorios rápidos.
+    \item \textbf{Detección} de picos: el osciloscopio detecta los valores máximo y mínimo de la señal de entrada en un intervalo
+      de muestreo, y los utiliza para construir la señal. Con este modo se pueden detectar pulsos transitorios, que con el
+      modo Normal podrían perderse.
+    \item \textbf{Promedio:} el osciloscopio adquiere determinada cantidad de veces la señal, promedia esos datos y construye la
+      señal con el resultado. Es útil para reducir el ruido.
+  \end{itemize}
+
