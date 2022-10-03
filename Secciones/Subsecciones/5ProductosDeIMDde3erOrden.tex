@@ -1,1 +1,123 @@
   \subsection{Observación de los productos de IMD de tercer orden}
+    En la experiencia anterior se hace uso de un diodo para poder generar la modulación de
+    amplitud. El circuito en cuestión se puede ver en la Figura~\ref{fig:ModuladorAM} de
+    la Sección~\ref{sec:Exp4_AM}.
+
+    Este dispositivo tiene un comportamiento alineal, el cual se puede modelar
+    de la siguiente  forma
+
+    \vspace{-10pt}
+    \begin{equation*}
+      v_{AM} = k_a(v_{G1}+v_{G2}) + k_b(v_{G1}+v_{G2})^2 + k_c(v_{G1}+v_{G2})^3 + \cdots
+    \end{equation*}
+    donde es de especial interés la región cuadrática de este dispositivo, ya que,
+    debido a este, se obtiene la modulación de amplitud buscada. Si se 
+    desarrolla el término correspondiente (el cuadrático), se logra justificar lo
+    mencionado
+    
+    \vspace{-10pt}
+    \begin{equation*}
+      v_{AM} = \cdots + k_b(v_{G1}^2 + 2\cdot{v_{G1}v_{G2}} + v_{G2}^2) + \cdots ~.
+    \end{equation*}
+
+    Por el contrario, las \textbf{alinealidades de orden superior} dan como resultado \textbf{productos
+    de intermodulación} (\textbf{IMD}), los cuales son efectos no deseados. La alinealidad más
+    importante suele ser la IMD de tercer orden, por lo cual, ahora se procede a determinar el
+    \textbf{rechazo de IMD de tercer orden} del circuito modulador utilizado.
+
+    Para ello, se setean ambos generadores \textbf{G1} y \textbf{G2} a una frecuencia de 
+    \textbf{f=50~kHz}, y a \textbf{igual amplitud}. Luego, se observan las señales de salida del circuito 
+    dejando un solo generador encendido. Los resultados se encuentran en las Figuras~\ref{fig:SalidaCircuitConG1Encendido}
+    y \ref{fig:SalidaCircuitConG2Encendido}.
+
+
+    \begin{figure}[H]
+      \centering
+      \begin{subfigure}[H]{0.48\textwidth}
+        \frame{\includegraphics[width=\textwidth]{Imagenes/ActividadPractica/5ProductosDeIMPde3erOrden/Exp5_SeñalSalidaConG1Autoset_Tiempo.jpeg}}
+        \caption{En tiempo.}
+      \end{subfigure}
+      \hfill 
+      \begin{subfigure}[H]{0.48\textwidth}
+        \frame{\includegraphics[width=\textwidth]{Imagenes/ActividadPractica/5ProductosDeIMPde3erOrden/Exp5_SeñalSalidaConG1_Frecuencia.jpeg}}
+        \caption{En frecuencia.}
+      \end{subfigure}
+
+      \caption{Salida del circuito con el generador G1 encendido.}
+      \label{fig:SalidaCircuitConG1Encendido}
+    \end{figure}
+
+
+    \begin{figure}[H]
+      \centering
+      \begin{subfigure}[H]{0.48\textwidth}
+        \frame{\includegraphics[width=\textwidth]{Imagenes/logo-utn.png}}
+        \caption{En tiempo.}
+      \end{subfigure}
+      \hfill 
+      \begin{subfigure}[H]{0.48\textwidth}
+        \frame{\includegraphics[width=\textwidth]{Imagenes/ActividadPractica/5ProductosDeIMPde3erOrden/Exp5_SeñalSalidaConG2_Frecuencia.jpeg}}
+        \caption{En frecuencia.}
+      \end{subfigure}
+
+      \caption{Salida del circuito con el generador G2 encendido.}
+      \label{fig:SalidaCircuitConG2Encendido}
+    \end{figure}
+
+    A continuación, se encienden ambos generadores y se ajusta el tiempo de muestreo y se habilita el \textbf{Zoom x10}
+    para obtener una mejor visualización. Luego, se procede a separar ambas señales un ancho de $\mathbf{\triangle f=  2~kHz}$,
+    quedando una de ellas en $\mathbf{f_1=49~kHz}$ y la otra en $\mathbf{f_2=51~kHz}$. En la
+    Figura~\ref{fig:SalidaConAmbosGeneradores} se puede ver lo explicado en este párrafo.
+
+    \begin{figure}[H]
+      \centering
+      \begin{subfigure}[H]{0.48\textwidth}
+        \frame{\includegraphics[width=\textwidth]{Imagenes/ActividadPractica/5ProductosDeIMPde3erOrden/Exp5_SeñalSalidaConLosDosGeneradores_Frec.jpeg}}
+        \caption{Ambas a la misma frecuencia.}
+      \end{subfigure}
+      \hfill 
+      \begin{subfigure}[H]{0.48\textwidth}
+        \frame{\includegraphics[width=\textwidth]{Imagenes/ActividadPractica/5ProductosDeIMPde3erOrden/Exp5_SeparacionDeSeñalesDe2KHz.jpeg}}
+        \caption{Con separación de $2~kHz$.}
+      \end{subfigure}
+
+      \caption{Espectro de la señal de salida con ambas señales inyectadas al circuito.}
+      \label{fig:SalidaConAmbosGeneradores}
+    \end{figure}
+
+    Las componentes de $\mathbf{47~kHz}\  (2f_1 - f2)$ y $\mathbf{53~kHz}\  (2f_2 - f1)$ son los productos de IMD de tercer orden. Para obtenerlos
+    se realiza la diferencia en amplitud entre estas y \textbf{f\textsubscript{1}} y \textbf{f\textsubscript{2}} respectivamente. Dichas mediciones,
+    realizadas con la ventana \textbf{Hanning}, se pueden ver en la Figura~\ref{fig:MedicionIMD}.
+
+    \begin{figure}[H]
+      \centering
+      \begin{subfigure}[H]{0.48\textwidth}
+        \frame{\includegraphics[width=\textwidth]{Imagenes/ActividadPractica/5ProductosDeIMPde3erOrden/Exp5_IDM3erOrdenConSeñal49kHz.jpeg}}
+        \caption{Para $f_1=49~kHz$.}
+      \end{subfigure}
+      \hfill 
+      \begin{subfigure}[H]{0.48\textwidth}
+        \frame{\includegraphics[width=\textwidth]{Imagenes/ActividadPractica/5ProductosDeIMPde3erOrden/Exp5_IDM3erOrdenConSeñal51kHz.jpeg}}
+        \caption{Para $f_2=51~kHz$.}
+      \end{subfigure}
+
+      \caption{Medición de diferencia de amplitudes.}
+      \label{fig:MedicionIMD}
+    \end{figure}
+
+    Los valores obtenidos de esta experiencia se encuentran tabulados en la Tabla~\ref{tab:DatosDeMedicionDeIMD}.
+
+    \begin{table}[H]
+      \centering
+    \begin{tabular}{ccccc} \hline \hline
+      $\mathbf{f_{1}}$    &   $\mathbf{f_{2}}$  &  $\mathbf{2f_{1}-f_{2}}$  & $\mathbf{2f_{2}-f_1}$  & \textbf{Rechazo IMD 3º}\\ \hline
+      $49~kHz$   &   $51~kHz$   &    $47~kHz$   &   $53~kHz$  & $15,2~dB$ \\ \hline \hline
+      \end{tabular}
+      \caption{Valores obtenidos para la medición del rechazo de IMD de 3º.}
+      \label{tab:DatosDeMedicionDeIMD}
+    \end{table}
+
+
+    \pagebreak
+
+
