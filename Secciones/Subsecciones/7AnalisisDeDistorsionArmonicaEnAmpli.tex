@@ -1,5 +1,18 @@
   \subsection{Análisis de la distorsión armónica producida por un amplificador}
-    Se propone analizar el siguiente circuito.
+    Se propone analizar un amplificador transistorizado de 4 etapas. Se ha tratado 
+    en las experiencias anteriores la \textbf{alinealidad} de éste tipo de dispositivos, 
+    para el presente experimento, nuevamente se debe tener en cuenta. 
+
+    Un amplificador tiene comportamiento lineal bajo determinadas condiciones, entre ellas, 
+    para pequeña señal y trabajando a lazo cerrado. Sucede que al trabajar en lazo abierto y 
+    a máxima excursión, se ingresa en zonas no lineales de la función de transferencia, lo que 
+    modifica el comportamiento del amplificador, provocando lo que se denomina 
+    \textbf{Distorsión Armónica}.
+
+    En la experiencia se determina el porcentaje de contenido armónico, tanto para lazo 
+    abierto como para lazo cerrado, utilizando la 
+    herramienta de análisis en frecuencia del osciloscopio. El circuito a implementar 
+    se enseña en la Figura~\ref{fig:Exp7EsquemaCircuito}.
 
       \begin{figure}[H]
         \centering
@@ -8,7 +21,8 @@
           \label{fig:Exp7EsquemaCircuito}
       \end{figure}
 
-    Se utiliza la placa que se presenta a continuación.
+    En la Figura~\ref{fig:Exp7Circuito} se muestran los dispositivos y el 
+    instrumental a usar.
 
       \begin{figure}[H]
         \centering
@@ -28,7 +42,10 @@
           \label{fig:Exp7Circuito}
       \end{figure} 
 
-    Inicialmente se configura para MES.
+    Inicialmente se configura el generador para \textbf{MES} (máxima excursión simétrica), y 
+    una frecuencia de $1~kHz$. Para ello se procede a variar la amplitud del generador hasta 
+    el punto donde hay un recorte visible en la señal. La Figura\ref{fig:Exp7MESLazoAbierto} 
+    muestra dicho punto de máxima excursión.
 
       \begin{figure}[H]
         \centering
