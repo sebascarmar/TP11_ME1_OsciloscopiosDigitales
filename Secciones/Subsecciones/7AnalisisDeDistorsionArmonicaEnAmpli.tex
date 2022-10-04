@@ -49,12 +49,15 @@
 
       \begin{figure}[H]
         \centering
-          \frame{\includegraphics[width=0.8\textwidth]{Imagenes/ActividadPractica/7AnalisisDeDistorisonArmonicaEnAmpli/Exp7_MESlazoAbierto.png}}
+          \frame{\includegraphics[width=0.48\textwidth]{Imagenes/ActividadPractica/7AnalisisDeDistorisonArmonicaEnAmpli/Exp7_MESlazoAbierto.png}}
           \caption{Máxima excursión simétrica a lazo abierto.}
           \label{fig:Exp7MESLazoAbierto}
       \end{figure}
 
-      Luego se muestra la fundamental y sus dos primeros armónicos.
+      Luego, se procede a hacer un análisis de frecuencia, para ello se configura el osciloscopio nuevamente 
+      en modo \textbf{FFT}, \textbf{Flattop}, \textbf{Zoom X10}, y $\mathbf{100~kS/s}$. En éste punto, se procede 
+      a realizar la medición de la fundamental y sus dos primeros armónicos, lo cual se observa en la 
+      Figura~\ref{fig:Exp7FrecFundYArmonicas}.
 
       \begin{figure}[H]
         \centering
@@ -73,7 +76,8 @@
         \label{fig:Exp7FrecFundYArmonicas}
       \end{figure}
 
-      Luego se miden las amplitudes de la fundamental y armónicos.
+      En la Figura~\ref{fig:Exp7AmplFundYArmonicasLA}, se miden las amplitudes de la fundamental y sus 
+      dos primeros armónicos.
 
     \begin{figure}[H]
         \centering
@@ -97,7 +101,8 @@
         \label{fig:Exp7AmplFundYArmonicasLA}
       \end{figure}
 
-      Se repite el procedimiento, con la misma señal pero cerrando el lazo.
+      Ahora, se procede a hacer el mismo análisis a lazo cerrado. Para empezar se ubican las frecuencias 
+      de la fundamental y sus dos primeros armónicos, ésto se enseña en la Figura~\ref{fig:Exp7FrecLazoCerrado}.
 
       \begin{figure}[H]
         \centering
@@ -106,7 +111,7 @@
           \label{fig:Exp7FrecLazoCerrado}
       \end{figure}
 
-      Se mide la amplitud de los mismos.
+      Por consiguiente, se miden las amplitudes de los ya mencionados, como muestra la Figura~{Exp7AmplFundYArmonicasLC}.
 
       \begin{figure}[H]
         \centering
@@ -129,6 +134,25 @@
         \caption{Amplitud de la fundamental y sus dos primeras armónicas.}
         \label{fig:Exp7AmplFundYArmonicasLC}
       \end{figure}    
-      
 
+      Finalmente se confecciona una tabla de valores con los resultados obtenidos, y se calcula la 
+      \textbf{Distorsión armónica} en porcentaje, que se define como 
+        \begin{equation}
+          Distorsion~Armonica_{\%}= \dfrac{V_{arm}}{V_{1}} \cdot 100~,
+          \label{eqn:DistorsionArmonica}
+        \end{equation}
+      con $V_{arm}=\sqrt[]{V_{2da}^2+V_{3ra}^2}$. Lo anteriormente dicho se muestra en las 
+      Tablas A y B.
+
+      \begin{table}[H]
+      \centering
+        \begin{tabular}{ccccc} \hline \hline
+          \textbf{Magnitud}            &   $\mathbf{V_{salida(PAP)}}$  &  $\mathbf{1erArmonica}$  & $\mathbf{2daArmonica}$  & $\mathbf{3raArmonica}$\\ \hline
+          \textbf{Frecuencia~[kHz]}    &   $1$                         &    $1$                   &   $2$                   & $3$ \\
+          \textbf{dBv}                 &   $-$                        &    $66$                  &   $23,6$                & $14$ \\
+          \textbf{Tensión~[V]}         &   $4$                         &    $1410,86$             &   $53~kHz$              & $15,2~dB$\\ \hline \hline
+          \end{tabular}
+          \caption{Valores obtenidos a Lazo Abierto.}
+          \label{tab:Exp7DistArmLA}
+      \end{table}
 
