@@ -17,7 +17,7 @@
       \begin{figure}[H]
         \centering
           \frame{\includegraphics[width=0.8\textwidth]{Imagenes/ActividadPractica/7AnalisisDeDistorisonArmonicaEnAmpli/EsquemaConexionAmplificador.png}}
-          \caption{Esquema de circuito a implementar.}
+          \caption{Esquema del circuito a implementar.}
           \label{fig:Exp7EsquemaCircuito}
       \end{figure}
 
@@ -44,7 +44,7 @@
 
     Inicialmente se configura el generador para \textbf{MES} (máxima excursión simétrica), y 
     una frecuencia de $1~kHz$. Para ello se procede a variar la amplitud del generador hasta 
-    el punto donde hay un recorte visible en la señal. La Figura\ref{fig:Exp7MESLazoAbierto} 
+    el punto donde hay un recorte visible en la señal. La Figura~\ref{fig:Exp7MESLazoAbierto} 
     muestra dicho punto de máxima excursión.
 
       \begin{figure}[H]
@@ -56,7 +56,7 @@
 
       Luego, se procede a hacer un análisis de frecuencia, para ello se configura el osciloscopio nuevamente 
       en modo \textbf{FFT}, \textbf{Flattop}, \textbf{Zoom X10}, y $\mathbf{100~kS/s}$. En éste punto, se procede 
-      a realizar la medición de la fundamental y sus dos primeros armónicos, lo cual se observa en la 
+      a realizar la medición de la frecuencia de la fundamental y sus dos primeros armónicos, lo cual se observa en la 
       Figura~\ref{fig:Exp7FrecFundYArmonicas}.
 
       \begin{figure}[H]
@@ -72,7 +72,7 @@
           \caption{Frecuencias de la segunda y tercer armónica $f_{2}=2~kHz$ y $f_{3}=3~kHz$.}
           \label{fig:Exp7Frec2da3raArmo}
         \end{subfigure}     
-        \caption{Análisis espectral del amplificador con señal de $1~kHz$.}
+        \caption{Análisis espectral del amplificador con señal de $1~kHz$ a lazo abierto.}
         \label{fig:Exp7FrecFundYArmonicas}
       \end{figure}
 
@@ -83,21 +83,21 @@
         \centering
         \begin{subfigure}[H]{0.48\textwidth}
           \frame{\includegraphics[width=\textwidth]{Imagenes/ActividadPractica/7AnalisisDeDistorisonArmonicaEnAmpli/Exp7_AmplitudDeLaFundamental.png}}
-          \caption{Amplitud de la fundamental $V_{fund}=66~dBv$.}
+          \caption{Amplitud de la fundamental $V_{fund}=5,03~dBv$.}
           \label{fig:Exp7AmpFundamentalLA}
         \end{subfigure}
         \hfill 
         \begin{subfigure}[H]{0.48\textwidth}
           \frame{\includegraphics[width=\textwidth]{Imagenes/ActividadPractica/7AnalisisDeDistorisonArmonicaEnAmpli/Exp7_AmplitudDelSegundoArmónico.png}}
-          \caption{Amplitud de la segunda armónica $V_{2da}=23,6~dBv$.}
+          \caption{Amplitud de la segunda armónica $V_{2da}=-37,4~dBv$.}
           \label{fig:Exp7AmpSegundaLA}
         \end{subfigure}     
         \begin{subfigure}[H]{0.48\textwidth}
           \frame{\includegraphics[width=\textwidth]{Imagenes/ActividadPractica/7AnalisisDeDistorisonArmonicaEnAmpli/Exp7_AmplitudDelTercerArmónicoALazoAbierto.png}}
-          \caption{Amplitud de la tercer armónica $V_{2da}=14~dBv$.}
+          \caption{Amplitud de la tercer armónica $V_{2da}=-47~dBv$.}
           \label{fig:Exp7AmpTercerLA}
         \end{subfigure}   
-        \caption{Amplitud de la fundamental y sus dos primeras armónicas.}
+        \caption{Amplitud de la fundamental y sus dos primeras armónicas a lazo abierto.}
         \label{fig:Exp7AmplFundYArmonicasLA}
       \end{figure}
 
@@ -106,12 +106,14 @@
 
       \begin{figure}[H]
         \centering
-          \frame{\includegraphics[width=0.8\textwidth]{Imagenes/ActividadPractica/7AnalisisDeDistorisonArmonicaEnAmpli/Exp7_LazoCerradoFrecuenciasDeSegundoYTercerArmonico.png}}
+          \frame{\includegraphics[width=0.48\textwidth]{Imagenes/ActividadPractica/7AnalisisDeDistorisonArmonicaEnAmpli/Exp7_LazoCerradoFrecuenciasDeSegundoYTercerArmonico.png}}
           \caption{Frecuencia de armónicos a lazo cerrado.}
           \label{fig:Exp7FrecLazoCerrado}
       \end{figure}
 
-      Por consiguiente, se miden las amplitudes de los ya mencionados, como muestra la Figura~{Exp7AmplFundYArmonicasLC}.
+      Por consiguiente, se miden las amplitudes de los ya mencionados, como muestra la 
+      Figura~\ref{fig:Exp7AmplFundYArmonicasLC}. Para ello se coloca un cursor en el punto 
+      a medir, y éste valor es correspondiente a la amplitud en dB referenciada a $1~[V_{rms}]$.
 
       \begin{figure}[H]
         \centering
@@ -131,28 +133,61 @@
           \caption{Amplitud de la tercer armónica $V_{2da}=16,4~dBv$.}
           \label{fig:Exp7AmpTercerLC}
         \end{subfigure}   
-        \caption{Amplitud de la fundamental y sus dos primeras armónicas.}
+        \caption{Amplitud de la fundamental y sus dos primeras armónicas a lazo cerrado.}
         \label{fig:Exp7AmplFundYArmonicasLC}
       \end{figure}    
 
-      Finalmente se confecciona una tabla de valores con los resultados obtenidos, y se calcula la 
+      Finalmente se confecciona una tabla de valores con los resultados obtenidos para lazo abierto y 
+      lazo cerrado, y se calcula la 
       \textbf{Distorsión armónica} en porcentaje, que se define como 
         \begin{equation}
           Distorsion~Armonica_{\%}= \dfrac{V_{arm}}{V_{1}} \cdot 100~,
           \label{eqn:DistorsionArmonica}
         \end{equation}
-      con $V_{arm}=\sqrt[]{V_{2da}^2+V_{3ra}^2}$. Lo anteriormente dicho se muestra en las 
-      Tablas A y B.
+      con $V_{arm}=\sqrt[]{V_{2da}^2+V_{3ra}^2}$.
+      
+      Lo anteriormente dicho se muestra en la 
+      Tabla~\ref{tab:Exp7DistArmLA} y la Tabla~\ref{tab:Exp7DistArmLC}.
 
       \begin{table}[H]
       \centering
         \begin{tabular}{ccccc} \hline \hline
           \textbf{Magnitud}            &   $\mathbf{V_{salida(PAP)}}$  &  $\mathbf{1erArmonica}$  & $\mathbf{2daArmonica}$  & $\mathbf{3raArmonica}$\\ \hline
           \textbf{Frecuencia~[kHz]}    &   $1$                         &    $1$                   &   $2$                   & $3$ \\
-          \textbf{dBv}                 &   $-$                        &    $66$                  &   $23,6$                & $14$ \\
-          \textbf{Tensión~[V]}         &   $4$                         &    $1410,86$             &   $53~kHz$              & $15,2~dB$\\ \hline \hline
+          \textbf{dBv}                 &   $-$                         &    $5,03$                &   $-37,4$                & $-47$ \\
+          \textbf{Tensión~[V]}         &   $4,88$                      &    $1,784$             &   $0,0135$              & $0,00447$\\ \hline \hline
           \end{tabular}
           \caption{Valores obtenidos a Lazo Abierto.}
           \label{tab:Exp7DistArmLA}
       \end{table}
 
+     \begin{table}[H]
+      \centering
+        \begin{tabular}{ccccc} \hline \hline
+          \textbf{Magnitud}            &   $\mathbf{V_{salida(PAP)}}$  &  $\mathbf{1erArmonica}$  & $\mathbf{2daArmonica}$  & $\mathbf{3raArmonica}$\\ \hline
+          \textbf{Frecuencia~[kHz]}    &   $1$                         &    $1$                   &   $2$                   & $3$ \\
+          \textbf{dBv}                 &   $-$                         &    $5,03$                &   $-42,6$                & $-44,6$ \\
+          \textbf{Tensión~[V]}         &   $4,88$                      &    $1,784$             &   $0,00741$              & $0,00588$\\ \hline \hline
+          \end{tabular}
+          \caption{Valores obtenidos a Lazo Cerrado.}
+          \label{tab:Exp7DistArmLC}
+      \end{table}
+
+      Finalmente, se determina la distorsión armónica total a lazo abierto y lazo 
+      cerrado. A lazo abierto se tiene que 
+      \begin{align*}
+        V_{arm_{Lazo Abierto}}=\sqrt[]{(13,5~mV)^2+(4,47~mV)^2} \hspace{20pt} \Longrightarrow \hspace{20pt} V_{arm}=14,22~[mV]~,
+      \end{align*}
+      y haciendo uso de la ecuación~\ref{eqn:DistorsionArmonica} dicho valor será
+      \begin{align*}
+        Distorsion~Armonica_{arm_{Lazo Abierto}}= \dfrac{14,22~mV}{1,784~V} \cdot 100 \hspace{20pt} \therefore \hspace{20pt} \boxed{Distorsion_{LA}=0,8\%}~.
+      \end{align*}
+
+      Luego se repiten los cálculos para lazo cerrado, obteniéndose 
+      \begin{align*}
+        V_{arm_{Lazo Cerrado}}=\sqrt[]{(7,41~mV)^2+(5,88~mV)^2} \hspace{20pt} \Longrightarrow \hspace{20pt} V_{arm}=9,46~[mV]~,
+      \end{align*}
+      y con éste valor se determina la distorsión armónica total, que será 
+      \begin{align*}
+        Distorsion~Armonica_{arm_{Lazo Cerrado}}= \dfrac{9,46~mV}{1,784~V} \cdot 100 \hspace{20pt} \therefore \hspace{20pt} \boxed{Distorsion_{LC}=0,53\%}~.
+      \end{align*}
