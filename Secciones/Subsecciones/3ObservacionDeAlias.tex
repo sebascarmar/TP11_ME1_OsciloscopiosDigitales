@@ -18,31 +18,41 @@
       
       \begin{figure}[H]
         \centering
-        \frame{\includegraphics[width=0.48\textwidth]{Imagenes/ActividadPractica/3ObservacionDeAlias/Exp3_Señal10K.jpeg}}
-        \caption{Espectro de señal senoidal de 10~kHz.}
+        \begin{subfigure}[H]{0.48\textwidth}
+          \frame{\includegraphics[width=\textwidth]{Imagenes/ActividadPractica/3ObservacionDeAlias/Exp3_Señal10k_25kSa_tiempo.jpeg}}
+          \caption{En tiempo.}
+        \end{subfigure}
+        \hfill
+        \begin{subfigure}[H]{0.48\textwidth}
+          \frame{\includegraphics[width=\textwidth]{Imagenes/ActividadPractica/3ObservacionDeAlias/Exp3_Señal10k_25kSa_frec.jpeg}}
+          \caption{En frecuencia.}
+        \end{subfigure}
+
+        \caption{Muestreo de señal de $10~kHz$ con $f_s=25~kSa/s$ (sin aliasing).}
         \label{fig:Exp3Señal10k}
       \end{figure}
       
       Ahora, se procede a cambiar la frecuencia de la señal que se desea medir, y se logra ver que
       a partir de la frecuencia $\mathbf{f = 12,5~kHz}$ empiezan a haber frecuencias falsas. Este
       efecto es esperable, ya que la velocidad de muestreo elegida cumple con el teorema de muestreo
-      solo para señales senoidales cuya frecuencia, como máximo, sea la mencionada en este párrafo.
+      solo para señales senoidales cuya frecuencia, como máximo, sea la mencionada en este párrafo. En
+      la Figura~\ref{fig:Exp3SeñalConAlias} se logra ver lo expresado para una señal de $\mathbf{f=14,3~kHz}$.
+
+
 
       \begin{figure}[H]
         \centering
         \begin{subfigure}[H]{0.48\textwidth}
-          \frame{\includegraphics[width=\textwidth]{Imagenes/ActividadPractica/3ObservacionDeAlias/Exp3_SeñalConAliasing.jpeg}}
-          \caption{$f=12,5~kHz$ y $fs=25~kSa/s$.}
-          \label{fig:Exp3AliasSeñal12_5kHz}
+          \frame{\includegraphics[width=\textwidth]{Imagenes/ActividadPractica/3ObservacionDeAlias/Exp3_Señal14k_25kSa_tiempo.jpeg}}
+          \caption{En tiempo.}
         \end{subfigure}
         \hfill 
         \begin{subfigure}[H]{0.48\textwidth}
-          \frame{\includegraphics[width=\textwidth]{Imagenes/ActividadPractica/3ObservacionDeAlias/Exp3_SeñalConAliasing.jpeg}}
-          \caption{$f=15~kHz$ y $fs=25~kSa/s$.}
-          \label{fig:Exp3AliasSeñal15kHz}
+          \frame{\includegraphics[width=\textwidth]{Imagenes/ActividadPractica/3ObservacionDeAlias/Exp3_Señal14k_25kSa_frec.jpeg}}
+          \caption{En frecuencia.}
         \end{subfigure}
 
-        \caption{Espectro de señales con aliasing.}
+        \caption{Muestreo de señal senoidal de $14~kHz$ con $f_s=25~kSa/s$ (con aliasing).}
         \label{fig:Exp3SeñalConAlias}
       \end{figure}
 
@@ -53,39 +63,40 @@
       \begin{figure}[H]
         \centering
         \begin{subfigure}[H]{0.48\textwidth}
-          \frame{\includegraphics[width=\textwidth]{Imagenes/logo-utn.png}}
+          \frame{\includegraphics[width=\textwidth]{Imagenes/ActividadPractica/3ObservacionDeAlias/Exp3_SeñalCuadradaSINAlias_tiempo.jpeg}}
           \caption{$f=10~kHz$ .}
-          \label{fig:Exp3SeñalCuadEnTiempo}
+          \label{En tiempo.}
         \end{subfigure}
         \hfill 
-        \begin{subfigure}[H]{0.48\textwidth}
+        \begin{subfigure}[H]{0.44\textwidth}
           \frame{\includegraphics[width=\textwidth]{Imagenes/ActividadPractica/3ObservacionDeAlias/Exp3_SeñalCuadradaSINAlias.jpeg}}
-          \caption{$f=15~kHz$ y $fs=25~kSa/s$.}
+          \caption{En frecuencia.}
           \label{fig:Exp3EspectroSeñalCuad}
         \end{subfigure}
 
-        \caption{Espectro de señales con aliasing.}
+        \caption{Muestreo de una señal cuadrada de $10~kHz$ con $f_s=25~kSa/s$ (sin aliasing).}
         \label{fig:Exp3SeñalCuad10k}
       \end{figure}
 
       Luego, se procede a aumentar la frecuencia de la señal del generador, y también se logra ver los efectos
-      del aliasing. En la Figura~\ref{fig:Exp3SeñalCuadConAlias} se muestra lo mencionado.
+      del aliasing. En la Figura~\ref{fig:Exp3SeñalCuadConAlias} se muestra lo mencionado, en donde aparecen
+      frecuencias que no son propias de la señal cuadrada.
 
       \begin{figure}[H]
         \centering
         \begin{subfigure}[H]{0.48\textwidth}
-          \frame{\includegraphics[width=\textwidth]{Imagenes/ActividadPractica/3ObservacionDeAlias/Exp3_SeñalConAliasing.jpeg}}
-          \caption{$f=12,5~kHz$ y $fs=25~kSa/s$.}
+          \frame{\includegraphics[width=\textwidth]{Imagenes/ActividadPractica/3ObservacionDeAlias/Exp3_SeñalCuadradaCONAlias_tiempo.jpeg}}
+          \caption{En tiempo.}
           \label{fig:Exp3AliasSeñalCuad1}
         \end{subfigure}
         \hfill 
-        \begin{subfigure}[H]{0.48\textwidth}
-          \frame{\includegraphics[width=\textwidth]{Imagenes/ActividadPractica/3ObservacionDeAlias/Exp3_SeñalConAliasing.jpeg}}
-          \caption{$f=15~kHz$ y $fs=25~kSa/s$.}
+        \begin{subfigure}[H]{0.44\textwidth}
+          \frame{\includegraphics[width=\textwidth]{Imagenes/ActividadPractica/3ObservacionDeAlias/Exp3_SeñalCuadradaCONAlias.jpeg}}
+          \caption{En frecuencia.}
           \label{fig:Exp3AliasSeñalCuad2}
         \end{subfigure}
 
-        \caption{Espectro de señales con aliasing.}
+        \caption{Espectro de señal cuadrada de $13~kHz$ con $f_s=25~kSa/s$ (con aliasing).}
         \label{fig:Exp3SeñalCuadConAlias}
       \end{figure}
 
