@@ -12,6 +12,16 @@
           \label{fig:Exp6EsquemaGeneradores}
       \end{figure}
 
+    El intrumental utilizado se enseña en la Figura~\ref{fig:Exp6Montaje}.
+
+      \begin{figure}[H]
+        \centering
+          \frame{\includegraphics[width=0.48\textwidth]{Imagenes/ActividadPractica/6AnalisisDeUnaSeñalDeFM/Exp6_MontajeCircuito.png}}
+          \caption{Montaje del circuito FM.}
+          \label{fig:Exp6Montaje}
+      \end{figure}    
+    
+    
     Inicialmente, se procede a ajustar los generadores. La frecuencia de G1 se establece en 
     $50~kHz$, y se gira el control de amplitud media vuelta. Por otro lado, se ajusta la 
     frecuencia de G2 a $1~kHz$. El seteo de los generadores se observa en la 
@@ -121,12 +131,12 @@
         \end{subfigure}
         \hfill 
         \begin{subfigure}[H]{0.48\textwidth}
-          \frame{\includegraphics[width=\textwidth]{Imagenes/ActividadPractica/6AnalisisDeUnaSeñalDeFM/Exp6_SeñalFMConModulanteCuadradaSinPromediosVentanaHanning.png}}
+          \frame{\includegraphics[width=\textwidth]{Imagenes/ActividadPractica/6AnalisisDeUnaSeñalDeFM/Exp6_SeñalFMConModulanteCuadradaSinPromediosVentanaRectangular.png}}
           \caption{Señal cuadrada con ventana Rectangular.}
           \label{fig:Exp6SeñalFMModulanteCuadradaRectangular}
         \end{subfigure}
-        \begin{subfigure}[H]{0.3\textwidth}
-          \frame{\includegraphics[width=\textwidth]{Imagenes/logo-utn.png}}
+        \begin{subfigure}[H]{0.48\textwidth}
+          \frame{\includegraphics[width=\textwidth]{Imagenes/ActividadPractica/6AnalisisDeUnaSeñalDeFM/Exp6_SeñalFMConModulanteTriángularVentanaFlattop.png}}
           \caption{Señal cuadrada con ventana Flattop.}
           \label{fig:Exp6SeñalFMModulanteCuadradaFlattop}
         \end{subfigure}
@@ -139,18 +149,18 @@
       \begin{figure}[H]
         \centering
         \begin{subfigure}[H]{0.48\textwidth}
-          \frame{\includegraphics[width=\textwidth]{Imagenes/ActividadPractica/6AnalisisDeUnaSeñalDeFM/Exp6_SeñalFMConModulanteTriángularVentanaFlattop.png}}
+          \frame{\includegraphics[width=\textwidth]{Imagenes/ActividadPractica/6AnalisisDeUnaSeñalDeFM/Exp6_SeñalFMConmodulanteTriángularSinPromedioVentanaHanning.png}}
           \caption{Señal triangular con ventana Hanning.}
           \label{fig:Exp6SeñalFMModulanteTriangularHanning}
         \end{subfigure}
         \hfill 
         \begin{subfigure}[H]{0.48\textwidth}
-          \frame{\includegraphics[width=\textwidth]{Imagenes/ActividadPractica/6AnalisisDeUnaSeñalDeFM/Exp6_SeñalFMConmodulanteTriángularSinPromedioVentanaRectangula.png}}
+          \frame{\includegraphics[width=\textwidth]{Imagenes/ActividadPractica/6AnalisisDeUnaSeñalDeFM/Exp6_SeñalFMConmodulanteTriángularSinPromedioVentanaRectangular.png}}
           \caption{Señal triangular con ventana Rectangular.}
           \label{fig:Exp6SeñalFMModulanteTriangularRectangular}
         \end{subfigure}
-       \begin{subfigure}[H]{0.3\textwidth}
-          \frame{\includegraphics[width=\textwidth]{Imagenes/logo-utn.png}}
+       \begin{subfigure}[H]{0.48\textwidth}
+          \frame{\includegraphics[width=\textwidth]{Imagenes/ActividadPractica/6AnalisisDeUnaSeñalDeFM/Exp6_SeñalFMConModulanteTriángularVentanaFlattop.png}}
           \caption{Señal triangular con ventana Flattop.}
           \label{fig:Exp6SeñalFMModulanteTriangularFlattop}
         \end{subfigure}
@@ -171,23 +181,23 @@
       \begin{figure}[H]
         \centering
         \begin{subfigure}[H]{0.48\textwidth}
-          \frame{\includegraphics[width=\textwidth]{Imagenes/ActividadPractica/6AnalisisDeUnaSeñalDeFM/Exp6_SeñalFMMedicionDeFrecModulante_DiferenciaEntrePortadoraYBandaLateralDer.png}}
+          \frame{\includegraphics[width=\textwidth]{Imagenes/ActividadPractica/6AnalisisDeUnaSeñalDeFM/Exp6_SeñalFMMedicionDeFrecModulante_DiferenciaEntrePortadoraYBandaI.png}}
           \caption{Diferencia con banda lateral inferior.}
           \label{fig:Exp6SeñalFMDifBandaLateralIzq}
         \end{subfigure}
         \hfill 
         \begin{subfigure}[H]{0.48\textwidth}
-          \frame{\includegraphics[width=\textwidth]{Imagenes/ActividadPractica/6AnalisisDeUnaSeñalDeFM/Exp6_SeñalFMMedicionDeFrecModulante_DiferenciaEntrePortadoraYBandaLateralIzq.png}}
+          \frame{\includegraphics[width=\textwidth]{Imagenes/ActividadPractica/6AnalisisDeUnaSeñalDeFM/Exp6_SeñalFMMedicionDeFrecModulante_DiferenciaEntrePortadoraYBandaS.png}}
           \caption{Diferencia con banda lateral superior.}
           \label{fig:Exp6SeñalFMDifBandaLateralDer}
         \end{subfigure}
       \end{figure}  
 
       De la Figura~\ref{fig:Exp6SeñalFMDifBandaLateralDer} se observa un valor de 
-      $f_{Portadora}=50~kHz$ y $f_{BLateral}=51,05~kHz$, reemplazando éstos valores en 
+      $f_{Portadora}=50,3~kHz$ y $f_{BLateral}=51,5~kHz$, reemplazando éstos valores en 
       la ecuación~(\ref{eqn:Exp6CalculoModulante}) se tiene 
 
       \begin{align*}
-        f_{Modulante}=|50~kHz-51,05~kHz| \hspace{20pt} \therefore \hspace{20pt} \boxed{f_{Modulante}=1,05~[kHz]}~.
+        f_{Modulante}=|50,3~kHz-51,5~kHz| \hspace{20pt} \therefore \hspace{20pt} \boxed{f_{Modulante}=1,2~[kHz]}~.
       \end{align*}
     
