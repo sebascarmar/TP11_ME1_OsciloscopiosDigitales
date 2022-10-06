@@ -1,5 +1,4 @@
   \subsection{Análisis de una señal modulada en frecuencia}
-
     Para la presente experiencia, se emplean los generadores utilizados anteriormente, 
     ya que poseen un \textbf{VCO} (oscilador controlado por tensión), con el 
     cual se pretende generar una señal FM realizando el conexionado de la 
@@ -12,7 +11,7 @@
           \label{fig:Exp6EsquemaGeneradores}
       \end{figure}
 
-    El intrumental utilizado se enseña en la Figura~\ref{fig:Exp6Montaje}.
+    El instrumental utilizado se enseña en la Figura~\ref{fig:Exp6Montaje}.
 
       \begin{figure}[H]
         \centering
@@ -23,8 +22,8 @@
      
     
     Inicialmente, se procede a ajustar los generadores. La frecuencia de G1 se establece en 
-    $50~kHz$, y se gira el control de amplitud media vuelta. Por otro lado, se ajusta la 
-    frecuencia de G2 a $1~kHz$. El seteo de los generadores se observa en la 
+    $\mathbf{f_{G1}=50~kHz}$, y se gira el control de amplitud media vuelta. Por otro lado, se ajusta la 
+    frecuencia de G2 a $\mathbf{f_{G2=1~kHz}}$. El seteo de los generadores se observa en la 
     Figura~\ref{fig:Exp6CalibracionGeneradores}.
 
       \begin{figure}[H]
@@ -36,16 +35,17 @@
         \end{subfigure}
         \hfill 
         \begin{subfigure}[H]{0.48\textwidth}
-          \frame{\includegraphics[width=\textwidth]{Imagenes/ActividadPractica/6AnalisisDeUnaSeñalDeFM/Exp6_Calibración_G2.png}}
+          \frame{\includegraphics[width=\textwidth]{Imagenes/ActividadPractica/6AnalisisDeUnaSeñalDeFM/Exp6_Calibración_G2.jpg}}
           \caption{Calibración del segundo generador (G2).}
           \label{fig:Exp6CalibracionG2}
         \end{subfigure}
+
         \caption{Calibración de los generadores.}
         \label{fig:Exp6CalibracionGeneradores}
       \end{figure}
 
     Luego se procede a configurar el osciloscopio. Se coloca la base de tiempos  
-    en $1~ms/div$, con el control SEC/DIV, como muestra la Figura~\ref{fig:Exp6SeñalFM1ms}.
+    en $\mathbf{1~ms/div}$, con el control SEC/DIV, como muestra la Figura~\ref{fig:Exp6SeñalFM1ms}.
 
       \begin{figure}[H]
         \centering
@@ -54,9 +54,9 @@
           \label{fig:Exp6SeñalFM1ms}
       \end{figure}
 
-    Siguiendo el procedimiento, se configura el \textbf{MATH MENU} de la siguiente manera  
-    \textbf{Hanning}, \textbf{Zoom X10}, y modo adquisión \textbf{Promedio} en 
-    \textbf{64} muestras. La salida FM configurada, se observa en frecuencia en la Figura~\ref{fig:Exp6SeñalFMConfigurada}.
+    Siguiendo el procedimiento, se configura el menú matemáttico de la siguiente manera:
+    \textbf{Hanning}, \textbf{Zoom X10}, y modo adquisición \textbf{Promedio} en 
+    64 muestras. La salida FM configurada, se observa en frecuencia en la Figura~\ref{fig:Exp6SeñalFMConfigurada}.
 
       \begin{figure}[H]
         \centering
@@ -68,7 +68,7 @@
         \hfill 
         \begin{subfigure}[H]{0.48\textwidth}
           \frame{\includegraphics[width=\textwidth]{Imagenes/ActividadPractica/6AnalisisDeUnaSeñalDeFM/Exp6_SalidaFMEnFrecuenciaAdqNormal.png}}
-          \caption{Adquisicion normal.}
+          \caption{Adquisición normal.}
           \label{fig:Exp6SeñalFMAdquisicionNormal}
         \end{subfigure}
         \caption{Generación de señal FM observada en frecuencia.}
@@ -81,8 +81,7 @@
     \begin{equation*}
       m_{f}=\dfrac{\Delta_{f}}{f_{m}}~,
     \end{equation*}
-
-    Con lo cual, se debe variar la frecuencia de la onda modulante buscando obtener 
+    con lo cual, se debe variar la frecuencia de la onda modulante buscando obtener 
     un índice de modulación de \textbf{2.4}, el cual corresponde a una modulación sin 
     portadora. El resultado se observa en la 
     Figura~\ref{fig:Exp6SeñalFMindice2_4}.
@@ -91,13 +90,13 @@
         \centering
         \begin{subfigure}[H]{0.48\textwidth}
           \frame{\includegraphics[width=\textwidth]{Imagenes/ActividadPractica/6AnalisisDeUnaSeñalDeFM/Exp6_SalidaFMconindice2_4yPromedios.png}}
-          \caption{Salida FM usando adquisión promedio.}
+          \caption{Salida FM usando adquisición promedio.}
           \label{fig:Exp6SeñalFMIndice2_4AdquisicionPromedio}
         \end{subfigure}
         \hfill 
         \begin{subfigure}[H]{0.48\textwidth}
           \frame{\includegraphics[width=\textwidth]{Imagenes/ActividadPractica/6AnalisisDeUnaSeñalDeFM/Exp6_SalidaFMindice2_4SinPromedios2.png}}
-          \caption{Salida FM usando adquisión normal.}
+          \caption{Salida FM usando adquisición normal.}
           \label{fig:Exp6SeñalFMIndice2_4AdquisicionNormal}
         \end{subfigure}
         \caption{Generación de señal FM observada en frecuencia.}
@@ -111,33 +110,33 @@
       \begin{figure}[H]
         \centering
           \frame{\includegraphics[width=0.5\textwidth]{Imagenes/ActividadPractica/6AnalisisDeUnaSeñalDeFM/Exp6_SalidaFMindiceligeramentedisminuido.png}}
-          \caption{Índice ligeramente disminuído.}
+          \caption{Índice ligeramente disminuido.}
           \label{fig:Exp6SeñalFMIndiceDisminuido}
       \end{figure}
     
-    Se procede a cambiar la salida de onda modulante (control del generador G2), a onda 
+    Se procede a cambiar la salida de onda modulante (generador G2), a onda 
     cuadrada y triangular. Se observa el cambio en el espectro en la 
-    Figura~\ref{fig:Exp6SeñalFMModulanteCuadrada} y la 
-    Figura~\ref{fig:Exp6SeñalFMModulanteTriangular} para señal 
+    Figuras~\ref{fig:Exp6SeñalFMModulanteCuadrada} y 
+    \ref{fig:Exp6SeñalFMModulanteTriangular} para señal 
     cuadrada y triangular respectivamente, además se cambia el tipo 
     de ventana entre Hanning, Rectangular y Flattop.
 
       \begin{figure}[H]
         \centering
-        \begin{subfigure}[H]{0.48\textwidth}
+        \begin{subfigure}[H]{0.40\textwidth}
           \frame{\includegraphics[width=\textwidth]{Imagenes/ActividadPractica/6AnalisisDeUnaSeñalDeFM/Exp6_SeñalFMConmodulanteCuadradaSinPromedios.png}}
-          \caption{Señal cuadrada con ventana Hanning.}
+          \caption{Con ventana Hanning.}
           \label{fig:Exp6SeñalFMModulanteCuadradaHanning}
         \end{subfigure}
         \hfill 
-        \begin{subfigure}[H]{0.48\textwidth}
+        \begin{subfigure}[H]{0.40\textwidth}
           \frame{\includegraphics[width=\textwidth]{Imagenes/ActividadPractica/6AnalisisDeUnaSeñalDeFM/Exp6_SeñalFMConModulanteCuadradaSinPromediosVentanaRectangular.png}}
-          \caption{Señal cuadrada con ventana Rectangular.}
+          \caption{Con ventana Rectangular.}
           \label{fig:Exp6SeñalFMModulanteCuadradaRectangular}
         \end{subfigure}
-        \begin{subfigure}[H]{0.48\textwidth}
+        \begin{subfigure}[H]{0.40\textwidth}
           \frame{\includegraphics[width=\textwidth]{Imagenes/ActividadPractica/6AnalisisDeUnaSeñalDeFM/Exp6_SeñalFMConModulanteTriángularVentanaFlattop.png}}
-          \caption{Señal cuadrada con ventana Flattop.}
+          \caption{Con ventana Flattop.}
           \label{fig:Exp6SeñalFMModulanteCuadradaFlattop}
         \end{subfigure}
         \caption{Onda cuadrada como señal modulante.}
@@ -150,18 +149,18 @@
         \centering
         \begin{subfigure}[H]{0.48\textwidth}
           \frame{\includegraphics[width=\textwidth]{Imagenes/ActividadPractica/6AnalisisDeUnaSeñalDeFM/Exp6_SeñalFMConmodulanteTriángularSinPromedioVentanaHanning.png}}
-          \caption{Señal triangular con ventana Hanning.}
+          \caption{Con ventana Hanning.}
           \label{fig:Exp6SeñalFMModulanteTriangularHanning}
         \end{subfigure}
         \hfill 
         \begin{subfigure}[H]{0.48\textwidth}
           \frame{\includegraphics[width=\textwidth]{Imagenes/ActividadPractica/6AnalisisDeUnaSeñalDeFM/Exp6_SeñalFMConmodulanteTriángularSinPromedioVentanaRectangular.png}}
-          \caption{Señal triangular con ventana Rectangular.}
+          \caption{Con ventana Rectangular.}
           \label{fig:Exp6SeñalFMModulanteTriangularRectangular}
         \end{subfigure}
        \begin{subfigure}[H]{0.48\textwidth}
           \frame{\includegraphics[width=\textwidth]{Imagenes/ActividadPractica/6AnalisisDeUnaSeñalDeFM/Exp6_SeñalFMConModulanteTriángularVentanaFlattop.png}}
-          \caption{Señal triangular con ventana Flattop.}
+          \caption{Con ventana Flattop.}
           \label{fig:Exp6SeñalFMModulanteTriangularFlattop}
         \end{subfigure}
         \caption{Onda triangular como señal modulante.}
@@ -170,7 +169,7 @@
 
     Se procede a efectuar la medición de frecuencias de portadora y de bandas 
     laterales, para determinar el valor de la frecuencia modulante. Se emplea como 
-    señal modulante una onda senoidal, y se setea ventana Hanning para realizar 
+    señal modulante una onda senoidal, y se setea ventana \textbf{Hanning} para realizar 
     la medición.
 
       \begin{equation}
