@@ -51,7 +51,7 @@
       \label{fig:SeñalCuadModoNormal}
     \end{figure}
 
-    Ahora, se selecciona el modo de adquisicón de \textbf{detección de picos} y se varían los tipos de ventanas.
+    Ahora, se selecciona el modo de adquisición de \textbf{detección de picos} y se varían los tipos de ventanas.
     Esto se encuentra en la Figura~\ref{fig:SeñalCuadModoDetecPicos}.
     \begin{figure}[H]
       \centering
@@ -100,6 +100,9 @@
 
     
     \subsubsection{Medición de frecuencia}
+      Para medir las \textbf{frecuencias} de los armónicos de la señal se hace uso de los cursores del osciloscopio.
+      Además, se selecciona el modo de adquisición \textbf{Promedio} con 64 cuentas, y la ventana
+      \textbf{Rectangular}. Los valores se encuentran en la Tabla~\ref{tab:ComponentesEspectrExp1}.
 
       \begin{table}[H]
         \centering
@@ -109,23 +112,105 @@
         \end{tabular}
         \caption{Frecuencias de las primeras 7 componentes espectrales.}
         \label{tab:ComponentesEspectrExp1}
-      \end{table}
+      \end{table} 
 
+      Las capturas con las mediciones de frecuencia realizadas con el osciloscopios encuentran en la 
+      Figura~\ref{fig:SeñalCuad_MedicFrecOscilo}.
 
+      \begin{figure}[H]
+        \centering
+        \begin{subfigure}[H]{0.40\textwidth}
+          \frame{\includegraphics[width=\textwidth]{Imagenes/ActividadPractica/1AnalisisDeUnaSeñalCuadrada/Exp1_SeñalCuadrada_Frec_Armo1y2.jpeg}}
+          \caption{Con ventana Flattop.}
+        \end{subfigure}
+        \hfill 
+        \begin{subfigure}[H]{0.40\textwidth}
+          \frame{\includegraphics[width=\textwidth]{Imagenes/ActividadPractica/1AnalisisDeUnaSeñalCuadrada/Exp1_SeñalCuadrada_Frec_Armo3y4.jpeg}}
+          \caption{Con ventana Rectangular.}
+        \end{subfigure}
+        \hfill 
+        \begin{subfigure}[H]{0.40\textwidth}
+          \frame{\includegraphics[width=\textwidth]{Imagenes/ActividadPractica/1AnalisisDeUnaSeñalCuadrada/Exp1_SeñalCuadrada_Frec_Armo5y6.jpeg}}
+          \caption{Con ventana de Hanning.}
+        \end{subfigure}
+        \hfill 
+        \begin{subfigure}[H]{0.40\textwidth}
+          \frame{\includegraphics[width=\textwidth]{Imagenes/ActividadPractica/1AnalisisDeUnaSeñalCuadrada/Exp1_SeñalCuadrada_Frec_Armo7y8.jpeg}}
+          \caption{Con ventana de Hanning.}
+        \end{subfigure}
+
+        \caption{Señal cuadrada de $1~kHz$ con modo de adquisición de promedios.}
+        \label{fig:SeñalCuad_MedicFrecOscilo}
+      \end{figure}
+
+      
     \subsubsection{Medición de amplitud}
-
+      Por último, se procede a medir la \textbf{amplitud} de las componentes espectrales de la señal. Para ello, se hace uso de los cursores
+      del osciloscopio, previamente habiendo seleccionado la ventana \textbf{Flattop}. Vale aclarar que el osciloscopio realiza las mediciones
+      en decibeles referenciados a 1~V (\textbf{dBv}). En la Tabla~\ref{tab:AmplitudEspectrExp1} se encuentran tabulados los resultados de la medición.
 
       \begin{table}[H]
         \centering
       \begin{tabular}{cccccccc} \hline \hline
         \textbf{Comp. Espectral}  &  \textbf{1}  &  \textbf{2}  & \textbf{3}  & \textbf{4} & \textbf{5}  & \textbf{6}  &  \textbf{7}\\ \hline
-        \textbf{Tensión}   &   $V_1$   &    $V_2$   &   $V_3$  &  $V_4$  &  $V_5$  &  $V_6$  &  $V_7$\\ \hline \hline
-        \textbf{[dBv]}   &   $-790m$   &    $-10,2$   &   $-14,6$  &  $-17,8$  &  $-20$  &  $-21,4$  &  $-23,3$\\ \hline
-        \textbf{[V]}     &  $0,91$     &    $0,31$    & $0,19$     &  $0,13$   &  $0,1$  &  $0,09$   &  $0,07$ \\ \hline
-        $\mathbf{[V^2]}$ &  $0,83$     &    $0,09$    & $0,03$     &  $0,02$   &  $0,01$ &  $0,007$  &  $0,005$ \\ \hline \hline
+        \textbf{Tensión} &   $V_1$    &   $V_2$     &   $V_3$    &  $V_4$    &  $V_5$  &  $V_6$    &  $V_7$\\ \hline \hline
+        $\mathbf{[dBv]}$ &   $-0,79$  &   $-10,2$   &   $-14,6$  &  $-17,8$  &  $-20$  &  $-21,4$  &  $-23,3$\\ \hline
+        $\mathbf{[V]}$   &  $0,913$   &   $0,309$   & $0,186$    &  $0,129$  &  $0,1$  &  $0,085$  &  $0,068$ \\ \hline
+        $\mathbf{[V^2]}$ &  $0,834$   &   $0,095$   & $0,035$    &  $0,016$  &  $0,01$ &  $0,007$  &  $0,005$ \\ \hline \hline
         \end{tabular}
         \caption{Amplitudes de las primeras 7 componentes espectrales.}
         \label{tab:AmplitudEspectrExp1}
       \end{table}
+
+      Partiendo del Teorema de Parseval, se puede obtener el valor eficaz de la señal mediante la amplitud de sus componentes espectrales
+
+      \begin{align*}
+                        V_{RMS} &= \sqrt{V_1^2 + V_2^2 + V_3^2 + V_4^2 + V_5^2 + V_6^2 + V_7^2}  \\
+        \Longrightarrow V_{RMS} &= \sqrt{0,834 + 0,095 + 0,035 + 0,016 + 0,01 + 0,007 + 0,005 } \\
+      \end{align*}
+
+      \vspace{-25pt}
+      $$\therefore \hspace{20pt} \boxed{V_{RMS}=1,00~[V]}$$
+
+      Las capturas de las mediciones realizadas de las primeras cuatro componentes armónicas
+      se encuentran en la Figura~\ref{fig:SeñalCuad_MedicAmplOscilo}.
+
+      \begin{figure}[H]
+        \centering
+        \begin{subfigure}[H]{0.40\textwidth}
+          \frame{\includegraphics[width=\textwidth]{Imagenes/ActividadPractica/1AnalisisDeUnaSeñalCuadrada/Exp1_SeñalCuadrada_Frec_Armo1y2.jpeg}}
+          \caption{Con ventana Flattop.}
+        \end{subfigure}
+        \hfill 
+        \begin{subfigure}[H]{0.40\textwidth}
+          \frame{\includegraphics[width=\textwidth]{Imagenes/ActividadPractica/1AnalisisDeUnaSeñalCuadrada/Exp1_SeñalCuadrada_Frec_Armo3y4.jpeg}}
+          \caption{Con ventana Rectangular.}
+        \end{subfigure}
+        \hfill 
+        \begin{subfigure}[H]{0.40\textwidth}
+          \frame{\includegraphics[width=\textwidth]{Imagenes/ActividadPractica/1AnalisisDeUnaSeñalCuadrada/Exp1_SeñalCuadrada_Frec_Armo5y6.jpeg}}
+          \caption{Con ventana de Hanning.}
+        \end{subfigure}
+        \hfill 
+        \begin{subfigure}[H]{0.40\textwidth}
+          \frame{\includegraphics[width=\textwidth]{Imagenes/ActividadPractica/1AnalisisDeUnaSeñalCuadrada/Exp1_SeñalCuadrada_Frec_Armo7y8.jpeg}}
+          \caption{Con ventana de Hanning.}
+        \end{subfigure}
+
+        \caption{Señal cuadrada de $1~kHz$ con modo de adquisición de promedios.}
+        \label{fig:SeñalCuad_MedicAmplOscilo}
+      \end{figure}
+
+      Como corroboración, se hace uso de la herramienta del osciloscopio que permite medir el
+      valor eficaz de una señal en el tiempo. El valor coincide con el calculado mediante 
+      las componentes espectrales - véase Figura~\ref{fig:CorroboraVrms}.
+
+      \begin{figure}[H]
+        \centering
+        \frame{\includegraphics[width=0.4\textwidth]{Imagenes/ActividadPractica/1AnalisisDeUnaSeñalCuadrada/Exp1_SeñalCuadrada_CorroboracionVrms.jpeg}}
+        \caption{Corroboración del valor de tensión eficaz de la señal.}
+        \label{fig:CorroboraVrms}
+      \end{figure}
+
 
     \pagebreak
