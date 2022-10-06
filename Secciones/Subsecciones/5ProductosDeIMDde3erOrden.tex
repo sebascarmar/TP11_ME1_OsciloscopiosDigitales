@@ -8,10 +8,10 @@
 
     \vspace{-10pt}
     \begin{equation*}
-      v_{AM} = k_a(v_{G1}+v_{G2}) + k_b(v_{G1}+v_{G2})^2 + k_c(v_{G1}+v_{G2})^3 + \cdots
+      v_{AM} = k_a(v_{G1}+v_{G2}) + k_b(v_{G1}+v_{G2})^2 + k_c(v_{G1}+v_{G2})^3 + \cdots~,
     \end{equation*}
     donde es de especial interés la región cuadrática de este dispositivo, ya que,
-    debido a este, se obtiene la modulación de amplitud buscada. Si se 
+    debido a esta, se obtiene la modulación de amplitud buscada. Si se 
     desarrolla el término correspondiente (el cuadrático), se logra justificar lo
     mencionado
     
@@ -27,18 +27,18 @@
 
     Para ello, se setean ambos generadores \textbf{G1} y \textbf{G2} a una frecuencia de 
     \textbf{f=50~kHz}, y a \textbf{igual amplitud}. Luego, se observan las señales de salida del circuito 
-    dejando un solo generador encendido. Los resultados se encuentran en las Figuras~\ref{fig:SalidaCircuitConG1Encendido}
-    y \ref{fig:SalidaCircuitConG2Encendido}.
+    dejando un solo generador encendido a la vez. Los resultados se encuentran en las 
+    Figuras~\ref{fig:SalidaCircuitConG1Encendido} y \ref{fig:SalidaCircuitConG2Encendido}.
 
 
     \begin{figure}[H]
       \centering
-      \begin{subfigure}[H]{0.48\textwidth}
+      \begin{subfigure}[H]{0.44\textwidth}
         \frame{\includegraphics[width=\textwidth]{Imagenes/ActividadPractica/5ProductosDeIMPde3erOrden/Exp5_SeñalSalidaConG1Autoset_Tiempo.jpeg}}
         \caption{En tiempo.}
       \end{subfigure}
       \hfill 
-      \begin{subfigure}[H]{0.48\textwidth}
+      \begin{subfigure}[H]{0.44\textwidth}
         \frame{\includegraphics[width=\textwidth]{Imagenes/ActividadPractica/5ProductosDeIMPde3erOrden/Exp5_SeñalSalidaConG1_Frecuencia.jpeg}}
         \caption{En frecuencia.}
       \end{subfigure}
@@ -50,12 +50,12 @@
 
     \begin{figure}[H]
       \centering
-      \begin{subfigure}[H]{0.48\textwidth}
-        \frame{\includegraphics[width=\textwidth]{Imagenes/logo-utn.png}}
+      \begin{subfigure}[H]{0.44\textwidth}
+        \frame{\includegraphics[width=\textwidth]{Imagenes/ActividadPractica/5ProductosDeIMPde3erOrden/Exp5_SeñalSalidaConG2Autoset_Tiempo.jpeg}}
         \caption{En tiempo.}
       \end{subfigure}
       \hfill 
-      \begin{subfigure}[H]{0.48\textwidth}
+      \begin{subfigure}[H]{0.43\textwidth}
         \frame{\includegraphics[width=\textwidth]{Imagenes/ActividadPractica/5ProductosDeIMPde3erOrden/Exp5_SeñalSalidaConG2_Frecuencia.jpeg}}
         \caption{En frecuencia.}
       \end{subfigure}
@@ -85,8 +85,9 @@
       \label{fig:SalidaConAmbosGeneradores}
     \end{figure}
 
-    Las componentes de $\mathbf{47~kHz}\  (2f_1 - f2)$ y $\mathbf{53~kHz}\  (2f_2 - f1)$ son los productos de IMD de tercer orden. Para obtenerlos
-    se realiza la diferencia en amplitud entre estas y \textbf{f\textsubscript{1}} y \textbf{f\textsubscript{2}} respectivamente. Dichas mediciones,
+    Las componentes de $\mathbf{47~kHz}\  (2f_1 - f2)$ y $\mathbf{53~kHz}\  (2f_2 - f1)$ son los productos de IMD de 
+    tercer orden. Para obtenerlos el rechazo a los mismos, se realiza la diferencia en amplitud entre estas y 
+    \textbf{f\textsubscript{1}} y \textbf{f\textsubscript{2}} respectivamente. Dichas mediciones,
     realizadas con la ventana \textbf{Hanning}, se pueden ver en la Figura~\ref{fig:MedicionIMD}.
 
     \begin{figure}[H]
@@ -111,7 +112,7 @@
       \centering
     \begin{tabular}{ccccc} \hline \hline
       $\mathbf{f_{1}}$    &   $\mathbf{f_{2}}$  &  $\mathbf{2f_{1}-f_{2}}$  & $\mathbf{2f_{2}-f_1}$  & \textbf{Rechazo IMD 3º}\\ \hline
-      $49~kHz$   &   $51~kHz$   &    $47~kHz$   &   $53~kHz$  & $15,2~dB$ \\ \hline \hline
+      $49~kHz$   &   $51~kHz$   &    $47~kHz$   &   $53~kHz$  & $28~dB$ \\ \hline \hline
       \end{tabular}
       \caption{Valores obtenidos para la medición del rechazo de IMD de 3º.}
       \label{tab:DatosDeMedicionDeIMD}
